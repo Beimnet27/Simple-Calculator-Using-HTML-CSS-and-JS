@@ -1,72 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>calc</title>
-        <style type="text/css">
-        h1{
-            margin-top: 10%;
-            font-size: 32px;
-            background-color: black;
-            color:yellow;
-
-        }
-        #btn{
-        	margin-left:1%;
-        	margin-top: 3%;
-            width: 50px;
-            height: 50px;
-            color: green;
-            font-size: 22px;
-            font-style: bold;
-            border-radius: 50% ;
-            border-color: transparent;
-            border-right: 9px solid rgba(0,0,0,0.5);
-            border-bottom: 3px solid rgba(0,0,0,0.5);
-            background: transparent;
-            box-shadow: inset 3px 3px 3px 3px rgba(0,0,0,0.5),
-            			 6px 7px 14px 3px gray;
-        }
-        #btn:hover{
-            
-            height: 60px;
-            width: 60px;
-        }
-        #display{
-            height: 45px;
-            width: 65%;
-            font-size: 35px;
-            color: yellow;
-            background: linear-gradient(315deg, #ff04cd, #2593a4);
-            border-color: white;
-            border-bottom: 3px solid black;
-            border-right: 5px solid black;
-        }
-        </style>
-    </head>
-    <body>
-        <center>
-        <h1>Advanced Calculator</h1>
-        <input type="text" id="display" /><br>
-        <input type="button" name="one" id="btn" onclick="document.getElementById('display').value +='1'" value="1"/>
-        <input type="button" name="two" id="btn" onclick="document.getElementById('display').value +='2'" value="2"/>
-        <input type="button" name="three" id="btn" onclick="document.getElementById('display').value +='3'" value="3"/>
-        <input type="button" name="plus" id="btn" onclick="document.getElementById('display').value +='+'" value="+"/><br>
-        <input type="button" name="four" id="btn" onclick="document.getElementById('display').value +='4'" value="4"/>
-        <input type="button" name="five" id="btn" onclick="document.getElementById('display').value +='5'" value="5"/>
-        <input type="button" name="six" id="btn" onclick="document.getElementById('display').value +='6'" value="6"/>
-        <input type="button" name="minus" id="btn" onclick="document.getElementById('display').value +='-'" value="-"/><br>
-        <input type="button" name="seven" id="btn" onclick="document.getElementById('display').value +='7'" value="7"/>
-        <input type="button" name="eight" id="btn" onclick="document.getElementById('display').value +='8'" value="8"/>
-        <input type="button" name="nine" id="btn" onclick="document.getElementById('display').value +='9'" value="9"/>
-        <input type="button" name="times" id="btn" onclick="document.getElementById('display').value +='*'" value="*"/><br>
-        <input type="button" name="divide" id="btn" onclick="document.getElementById('display').value +='/'" value="/"/>
-        <input type="button" name="eight" id="btn" onclick="document.getElementById('display').value +='0'" value="0"/>
-        <input type="button" name="equa" id="btn" onclick="document.getElementById('display').value=eval(document.getElementById('display').value);display.style.backgroundColor = 'green'" value="="/>
-        <input type="button" name="modules" id="btn" onclick="document.getElementById('display').value +='%'" value="%"/><br>
-        <input type="button" name="square" id="btn" onclick="document.getElementById('display').value =document.getElementById('display').value * display.value" value="X&#178"/>
-        <input type="button" name="cube" id="btn" onclick="document.getElementById('display').value =document.getElementById('display').value * display.value * display.value" value="X&#179"/>
-        <input type="button" name="square" id="btn" onclick="document.getElementById('display').value =Math.sqrt(document.getElementById('display').value)" value="&#x221Ax"/>
-        <input type="button" name="clear" id="btn" onclick="document.getElementById('display').value ='';display.style.backgroundColor = 'blue'" value="C"/>
-    </center>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="">
+        <input type="text" placeholder="0.00" id="display" readonly><br>
+        <input type="button" value="1" onclick="Add(1)" />
+        <input type="button" value="2" onclick="Add(2)" />
+        <input type="button" value="3" onclick="Add(3)" />
+        <input type="button" value="+" onclick="Add('+')" /><br>
+        <input type="button" value="4" onclick="Add(4)" />
+        <input type="button" value="5" onclick="Add(5)" />
+        <input type="button" value="6" onclick="Add(6)" />
+        <input type="button" value="-" onclick="Add('-')" /><br>
+        <input type="button" value="7" onclick="Add(7)" />
+        <input type="button" value="8" onclick="Add(8)" />
+        <input type="button" value="9" onclick="Add(9)" />
+        <input type="button" value="*" onclick="Add('*')" /><br>
+        <input type="button" value="/" onclick="Add('/')" />
+        <input type="button" value="C" onclick="Clear()" />
+        <input type="button" value="0" onclick="Add(0)" />
+        <input type="button" value="E" onclick="Calculate()" />
+    </form>
 </body>
 </html>
