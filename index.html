@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Simple Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
     <form action="">
-        <input type="text" placeholder="0.00" id="display" readonly><br>
+        <input type="text" id="disp" placeholder="0.00" readonly /><br>
         <input type="button" value="1" onclick="Add(1)" />
         <input type="button" value="2" onclick="Add(2)" />
         <input type="button" value="3" onclick="Add(3)" />
@@ -28,5 +27,6 @@
         <input type="button" value="0" onclick="Add(0)" />
         <input type="button" value="E" onclick="Calculate()" />
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
